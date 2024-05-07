@@ -11,7 +11,7 @@
 
 
     <!--Link to calculator page-->
-    <a href="pages/calculator_page.html"><p>Calculator</p></a>
+    <a href="calculator_page.html"><p>Calculator</p></a>
 
 
     <!--Link to page 2-->
@@ -25,13 +25,17 @@
 
     <div>
 
+        <p id="error"></p>
+        <!--Inputs for calculations-->
         <p>Calc using brix</p>
         <label for="brix_value">Brix Value:</label>
-        <input type="number" id="brix_value"/><br>
+        <input type="number" id="brix_value" value="0" onchange = "brix_calculator()"/><br>
+
         <label for="potential_value">Potential Value:</label>
-        <input type="number" id="potential_value"/><br>
+        <input type="number" id="potential_value"value="0" onchange = "potential_calculator()"/><br>
+
         <label for="sg_value">SG Value:</label>
-        <input type="number" id="sg_value"/>
+        <input type="number" id="sg_value" value="0" onchange = "sg_calculator()"/>
 
     </div>
 
