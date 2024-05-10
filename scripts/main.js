@@ -1,58 +1,39 @@
 
-function main(){
-    // Get input
-    const brix_input = document.getElementById("brix_value")
-    const potential_input = document.getElementById("potential_value")
-    const sg_input  =document.getElementById("sg_value")
 
-
-}
-
-
-function brix_calculator(){
-
-    const error_text = document.getElementById("error")
-    error_text.innerHTML = ""
-
+function calculator(operation){
     // Get input
     var brix_input = document.getElementById("brix_value")
     var potential_input = document.getElementById("potential_value")
     var sg_input  = document.getElementById("sg_value")
 
+    
     var brix = brix_input.value
     var potential = potential_input.value
     var sg = sg_input.value
     
-    // Calc other values
-    potential = brix * 0.55
-    sg = (brix * 0.004) + 1
+    // Calculate other values
+    switch (operation){
+        case "brix":
+            potential = brix * 0.55
+            sg = (brix * 0.004) + 1
+            break;
 
+        case "potential":
+            brix = potential / 0.55
+            sg = (potential / 131.25) + 1
+            break;
+
+        case "sg":
+            brix = (sg - 1) / 0.004
+            potential = (sg - 1) * 131.25
+            break;
+    }
+
+    // Update values
     potential_input.value = potential
     sg_input.value = sg
-
-}
-
-
-function potential_calculator(){
-
-    const error_text = document.getElementById("error")
-    error_text.innerHTML = ""
-
-    // Get input
-    var brix_input = document.getElementById("brix_value")
-    var potential_input = document.getElementById("potential_value")
-    var sg_input  = document.getElementById("sg_value")
-
-    var brix = brix_input.value
-    var potential = potential_input.value
-    var sg = sg_input.value
-    
-    // Calc other values
-    brix = potential / 0.55
-    sg = (brix * 0.004) + 1
-
-    potential_input.value = potential
-    sg_input.value = sg
+    console.log(brix)
+    brix_input.value = brix
 
 }
 
