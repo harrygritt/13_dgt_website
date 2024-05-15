@@ -3,7 +3,6 @@ body {
 }
   
 
-
 .navbar a {
     display: inline-block;
     color: black;
@@ -22,4 +21,22 @@ body {
 .navbar a.active {
     background-color: white;
     color: #0077b6;
+}
+
+.calc-grid {
+    display: grid;
+    grid-template-areas:
+    'brix'
+    'potential'
+    'sg';
+    gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+}
+
+.calc-grid > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
 }
