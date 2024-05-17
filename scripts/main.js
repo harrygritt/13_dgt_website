@@ -11,6 +11,14 @@ function calculator(operation){
     var potential = potential_input.value
     var sg = sg_input.value
     
+    if(brix < 0 || potential < 0 || sg < 1){
+        brix = 0
+        potential = 0
+        sg = 1
+    }
+
+    
+     
     // Calculate other values
     switch (operation){
         case "brix":
