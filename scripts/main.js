@@ -1,4 +1,14 @@
 
+function mixer_calc(){
+    var percent_input = document.getElementById("percent")
+    var shot_input = document.getElementById("shot_size")
+    var cup_input = document.getElementById("cup_size")
+    
+    actaul_percent = (percent_input * shot_input) / cup_input
+    var actaul_percent
+    
+}
+
 
 function calculator(operation){
     // Get input
@@ -6,19 +16,17 @@ function calculator(operation){
     var potential_input = document.getElementById("potential_value")
     var sg_input  = document.getElementById("sg_value")
 
-    
     var brix = brix_input.value
     var potential = potential_input.value
     var sg = sg_input.value
     
+    // Check inupts to avoid negative numbers
     if(brix < 0 || potential < 0 || sg < 1){
         brix = 0
         potential = 0
         sg = 1
     }
 
-    
-     
     // Calculate other values
     switch (operation){
         case "brix":
