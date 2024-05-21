@@ -1,17 +1,29 @@
 
 function mixer_calc(){
-    var percent_input = document.getElementById("percent")
-    var shot_input = document.getElementById("shot_size")
-    var cup_input = document.getElementById("cup_size")
+    // Get mixer inputs
+    var percent_input = document.getElementById("percent").value
+    var shot_input = document.getElementById("shot_size").value
+    var cup_input = document.getElementById("cup_size").value
+    var actual_percent_value = document.getElementById("actual_percent_value")
     
-    actaul_percent = (percent_input * shot_input) / cup_input
-    var actaul_percent
+    // BUG - DOESN'T UPDATE INPUTS
+    if(percent_input < 0 || shot_input < 0 || cup_input < 0){
+        percent_input = 0
+        shot_input = 0
+        cup_input = 0
+    }
+
+    // Calculate actual percentage of mixer
+    actual_percent = Math.round(percent_input * shot_input) / cup_input
+
+    // Update value
+    actual_percent_value.innerHTML = actual_percent + "%"
     
 }
 
 
-function calculator(operation){
-    // Get input
+function convert_calc(operation){
+    // Get unit inputs
     var brix_input = document.getElementById("brix_value")
     var potential_input = document.getElementById("potential_value")
     var sg_input  = document.getElementById("sg_value")
@@ -48,7 +60,6 @@ function calculator(operation){
     // Update values
     potential_input.value = potential
     sg_input.value = sg
-    console.log(brix)
     brix_input.value = brix
 
 }
