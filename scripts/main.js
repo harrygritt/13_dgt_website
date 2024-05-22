@@ -1,20 +1,27 @@
 
 function mixer_calc(){
     // Get mixer inputs
-    var percent_input = document.getElementById("percent").value
-    var shot_input = document.getElementById("shot_size").value
-    var cup_input = document.getElementById("cup_size").value
+    var percent_input = document.getElementById("percent")
+    var shot_input = document.getElementById("shot_size")
+    var cup_input = document.getElementById("cup_size")
     var actual_percent_value = document.getElementById("actual_percent_value")
     
-    // BUG - DOESN'T UPDATE INPUTS
-    if(percent_input < 0 || shot_input < 0 || cup_input < 0){
-        percent_input = 0
-        shot_input = 0
-        cup_input = 0
+    var percent = percent_input.value
+    var shot = shot_input.value
+    var cup = cup_input.value
+
+    if(percent < 0 || shot < 0 || cup < 1){
+        percent = 0
+        shot = 0
+        cup = 1
     }
+    
+    percent_input.value = percent
+    shot_input.value = shot
+    cup_input.value = cup
 
     // Calculate actual percentage of mixer
-    actual_percent = Math.round(percent_input * shot_input) / cup_input
+    actual_percent = Math.round(percent * shot) / cup
 
     // Update value
     actual_percent_value.innerHTML = actual_percent + "%"
