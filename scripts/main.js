@@ -24,7 +24,7 @@ function mixer_calc(){
     actual_percent = Math.round(percent * shot) / cup
 
     // Update value
-    actual_percent_value.innerHTML = actual_percent + "%"
+    actual_percent_value.innerHTML = "Actual Percentage: " + actual_percent + "%"
     
 }
 
