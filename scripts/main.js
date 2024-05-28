@@ -76,3 +76,14 @@ function convert_calc(operation){
 window.onload = function() {
     main()
   };
+
+function runOnScroll(element){
+
+    // Update css var to be 0px
+
+}
+
+window.addEventListener(
+    "scroll",
+    () => runOnScroll(element),
+);

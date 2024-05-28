@@ -1,6 +1,28 @@
+:root {
+    --nav-height: 80px;
+    --nav-margin-top: 20px;
+}
+
+* {
+    transition: all 0.3s ease;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-image: url(../images/distillery-barrels.jpg); /* Royalty Free image from https://www.pickpik.com/distillery-barrels-wooden-kegs-bourbon-whiskey-aging-liquor-8637 */
+    margin: 0;
+}
+
+.navbar {
+    height: var(--nav-height);
+    width: 90%;
+    overflow: hidden;
+    background-color: pink;
+    box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.1);
+    opacity: 90%;
+    margin: auto;
+    margin-top: var(--nav-margin-top);
+    border-radius: 25px;
+    position: sticky;
 }
 
 .navbar a {
@@ -43,10 +65,21 @@ body {
     border-radius: 20px;
 }
 
-.calc-page-grid{
+.calc-page-grid {
     display: grid;
     grid-template-columns: auto auto;
     height: 100%;
     width: 100%;
     margin: auto;
+}
+
+.index-background {
+    background-image: url(../images/winery-barrels-large.jpg); /* Royalty Free image from https://www.pickpik.com/winery-chai-barrel-wine-cave-castle-124788 */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 95vh;
+    width: 100vw;
+    z-index: -1;
+    position: relative;
+    top:  calc(var(--nav-height) * -1 - var(--nav-margin-top));
 }
