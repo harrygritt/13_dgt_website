@@ -71,7 +71,6 @@ function convert_calc(operation){
 
 }
 
-
 // Run the code when the page is ready
 window.onload = function() {
     main()

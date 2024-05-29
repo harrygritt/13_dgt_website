@@ -16,7 +16,7 @@ body {
     height: var(--nav-height);
     width: 90%;
     overflow: hidden;
-    background-color: pink;
+    background-color: #f7934c;
     box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.1);
     opacity: 90%;
     margin: auto;
@@ -29,20 +29,15 @@ body {
     display: inline-block;
     color: black;
     text-align: center;
-    padding: 14px;
+    padding: 13px;
     text-decoration: none;
     font-size: 17px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
   
 .navbar a:hover {
-    background-color: #90e0ef;
-    color: black;
-}
-  
-.navbar a.active {
-    background-color: white;
-    color: #0077b6;
+    background-color: #ffc15e;
+    color: whitesmoke;
 }
 
 .calc-grid {
@@ -82,4 +77,6 @@ body {
     z-index: -1;
     position: relative;
     top:  calc(var(--nav-height) * -1 - var(--nav-margin-top));
+    text-align: center;
+    font-size: 100px;
 }
