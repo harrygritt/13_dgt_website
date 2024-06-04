@@ -36,21 +36,25 @@
             <p>Calculate the actual percents of your mixer:</p>
             <div>
                 <label for="percent">Percentage (%):</label>
-                <input type="number" id="percent" value="0" onchange = "mixer_calc('percent')"/><br>
+                <input type="number" id="percent" value="0" onchange="mixer_calc('percent')"/><br>
             </div>
             
             <div>
                 <label for="shot_size">Shot Volume (mL):</label>
-                <input type="number" id="shot_size" value="0" onchange = "mixer_calc('shot_size')"/><br>
+                <input type="number" id="shot_size" value="0" onchange="mixer_calc('shot_size')"/><br>
             </div>
 
             <div>
                 <label for="cup_size">Cup Volume (mL):</label>
-                <input type="number" id="cup_size" value="0" onchange = "mixer_calc('cup_size')"/>
+                <input type="number" id="cup_size" value="0" onchange="mixer_calc('cup_size')"/>
             </div>
 
             <div>
-                <p id="actual_percent_value"></p>
+                <p id="actual_percent_value">Actual Percentage = 0%</p>
+            </div>
+
+            <div>
+                <p id="percent_formula">Formula Used: <br> (Percent of Alcohol * Shot Volume) / Cup Volume</p>
             </div>
 
         </div>
@@ -61,19 +65,23 @@
             <p>Calc using "x"</p>
             <div>
                 <label for="brix_value">Brix Value:</label>
-                <input type="number" id="brix_value" value="0" onchange = "convert_calc('brix')"/><br>
+                <input type="number" id="brix_value" value="0" onchange="convert_calc('brix')"/><br>
             </div>
             
             <div>
                 <label for="potential_value">Potential Value:</label>
-                <input type="number" id="potential_value" value="0" onchange = "convert_calc('potential')"/><br>
+                <input type="number" id="potential_value" value="0" onchange="convert_calc('potential')"/><br>
             </div>
 
             <div>
                 <label for="sg_value">SG Value:</label>
-                <input type="number" id="sg_value" value="1" onchange = "convert_calc('sg')"/>
+                <input type="number" id="sg_value" value="1" onchange="convert_calc('sg')"/>
             </div>
-        
+            
+            <div>
+                <p id="unit_formula">Formula Used: <br> formula_pot </p>
+            </div>
+
         </div>
     </div>
 
