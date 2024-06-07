@@ -30,6 +30,9 @@ function mixer_calc(){
 
 
 function convert_calc(operation){
+    // Get Formulas
+    const formula_pot = document.getElementById(unit_formula).innerHTML()
+
     // Get unit inputs
     var brix_input = document.getElementById("brix_value")
     var potential_input = document.getElementById("potential_value")
@@ -51,6 +54,8 @@ function convert_calc(operation){
         case "brix":
             potential = brix * 0.55
             sg = (brix * 0.004) + 1
+            formula_pot.innerHTML() = "brix + * 0.55"
+            formula_sg = "(" + brix + "* 0.004) + 1"
             break;
 
         case "potential":
@@ -65,9 +70,9 @@ function convert_calc(operation){
     }
 
     // Update values
-    potential_input.value = potential
-    sg_input.value = sg
-    brix_input.value = brix
+    potential_input.value = Math.round(potential * 10) / 10 // 1 dp
+    sg_input.value = Math.round(sg * 1000) / 1000 // 3 dp
+    brix_input.value = Math.round(brix)
 
 }
 

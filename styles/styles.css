@@ -36,7 +36,7 @@ body {
 }
   
 .navbar a:hover {
-    background-color: #ffc15e;
+    background-color: #f7934c;
     color: whitesmoke;
 }
 
@@ -44,11 +44,11 @@ body {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     row-gap: 30px;
-    background-color: #2196F3;
+    background-color: #f7934c;
     padding: 10px;
     width: 50%;
     margin: auto;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.1);
 }
 
@@ -57,7 +57,7 @@ body {
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .calc-page-grid {
@@ -79,4 +79,8 @@ body {
     top:  calc(var(--nav-height) * -1 - var(--nav-margin-top));
     text-align: center;
     font-size: 100px;
+}
+
+#percent_formula {
+    font-size: small;
 }
