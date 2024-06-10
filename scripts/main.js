@@ -24,15 +24,15 @@ function mixer_calc(){
     actual_percent = Math.round(percent * shot) / cup
 
     // Update value
-    actual_percent_value.innerHTML = "Actual Percentage: " + actual_percent + "%"
+    actual_percent_value.innerHTML = "Actual Percentage = " + actual_percent + "%"
     
 }
 
 
 function convert_calc(operation){
     // Get Formulas
-    const formula_pot = document.getElementById(unit_formula).innerHTML()
-
+    const formula = document.getElementById("unit_formula")
+    
     // Get unit inputs
     var brix_input = document.getElementById("brix_value")
     var potential_input = document.getElementById("potential_value")
@@ -54,18 +54,19 @@ function convert_calc(operation){
         case "brix":
             potential = brix * 0.55
             sg = (brix * 0.004) + 1
-            formula_pot.innerHTML() = "brix + * 0.55"
-            formula_sg = "(" + brix + "* 0.004) + 1"
+            formula.innerHTML = "Potential: brix * 0.55 <br> SG: (brix * 0.004) + 1"
             break;
 
         case "potential":
             brix = potential / 0.55
             sg = (potential / 131.25) + 1
+            formula.innerHTML = "Brix: potential / 0.55 <br> SG: (potential / 131.25) + 1"
             break;
 
         case "sg":
             brix = (sg - 1) / 0.004
             potential = (sg - 1) * 131.25
+            formula.innerHTML = "Brix: (sg - 1) / 0.004 <br> Potential: (sg - 1) * 131.25"
             break;
     }
 

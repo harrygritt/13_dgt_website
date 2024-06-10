@@ -77,10 +77,15 @@ body {
     z-index: -1;
     position: relative;
     top:  calc(var(--nav-height) * -1 - var(--nav-margin-top));
+    
+}
+
+.formula {
+    font-size: small;
+}
+
+.website-name {
     text-align: center;
     font-size: 100px;
 }
 
-#percent_formula {
-    font-size: small;
-}
