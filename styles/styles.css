@@ -122,3 +122,8 @@ body {
     color: white;
     background-color: #e85d04;
 }
+
+.navbar img {
+    height: 50px;
+    width: 50px;
+}
