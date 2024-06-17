@@ -1,0 +1,35 @@
+{
+    "jokes":[
+        {
+            "setup":"TEMPLATE",
+            "punchLine":"TEMPLATE",
+            "credit":"TEMPLATE"
+        },
+        {
+            "setup":"What is the definition of a balanced diet?",
+            "punchLine":"A beer in each hand.",
+            "credit":"https://www.littledayout.com/beer-jokes-to-raise-a-toast-cheers/"
+
+        },
+        {
+          "setup":"Why do they never serve beer at a math party?", 
+          "punchLine":"Because you can’t drink and derive.",
+          "credit":"https://www.littledayout.com/beer-jokes-to-raise-a-toast-cheers/"
+        },
+        {
+            "setup":"It takes me five minutes to walk to the local pub and 25 mins to walk back from it",
+            "punchLine":"The difference is staggering",
+            "credit":"Rob Courtney on https://community.brewart.com/topic/265-alcohol-jokes/"
+        },
+        {
+            "setup":"Why do we love beer?",
+            "punchLine":"Because you can’t drink bacon.",
+            "credit":"https://www.littledayout.com/beer-jokes-to-raise-a-toast-cheers/"
+        },
+        {
+            "setup":"Fun fact about root beer.",
+            "punchLine":"You can turn it into regular beer by pouring it into a square cup.",
+            "credit":"https://www.littledayout.com/beer-jokes-to-raise-a-toast-cheers/"
+        }
+    ]
+    }

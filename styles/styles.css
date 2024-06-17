@@ -37,6 +37,7 @@ body {
     text-decoration: none;
     font-size: 17px;
     border-radius: var(--curve);
+    height: var(--nav-height)
 }
   
 .navbar a:hover {
@@ -124,6 +125,5 @@ body {
 }
 
 .navbar img {
-    height: 50px;
-    width: 50px;
+    width: 40px;
 }
