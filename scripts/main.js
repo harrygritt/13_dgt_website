@@ -77,9 +77,36 @@ function convert_calc(operation){
 
 }
 
+
+function fetch_jokes(){
+
+    // Begin Fetching Jokes
+    fetch("../data/jokes.json")
+    
+    // Bergin converting into JSON
+    .then((response) => {
+            return response.json()
+        }
+    )
+    .then((data) => {
+        display_jokes(data.jokes)
+    }
+)
+}
+
+
+function display_jokes(data){
+    
+    // Loop to display each joke 
+    for (let i = 0; i < data.length; i++) {
+        console.log(data[i])
+    }
+}
+
+
 // Run the code when the page is ready
 window.onload = function() {
-    main()
+    fetch_jokes()
   };
 
 function runOnScroll(element){
