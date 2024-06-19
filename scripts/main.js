@@ -83,7 +83,7 @@ function fetch_jokes(){
     // Begin Fetching Jokes
     fetch("../data/jokes.json")
     
-    // Bergin converting into JSON
+    // Begin converting into JSON
     .then((response) => {
             return response.json()
         }
@@ -96,9 +96,39 @@ function fetch_jokes(){
 
 
 function display_jokes(data){
-    
+
+    const joke_container = document.getElementById("joke_container")
+
     // Loop to display each joke 
-    for (let i = 0; i < data.length; i++) {
+    for (let i = 1; i < data.length; i++) {
+
+        // Create the joke contianer
+        let j_total = document.createElement("div");
+
+
+        // Fill the joke info
+        let j_setup = document.createElement("p");
+        j_setup.innerHTML = data[i].setup
+        j_total.append(j_setup)
+        
+        let j_line = document.createElement("em");
+        j_line.innerHTML = data[i].punchLine
+        j_total.append(j_line)
+
+        let j_credit = document.createElement("p");
+        j_credit.classList.add("credit")
+        j_credit.innerHTML = "Credit: " + data[i].credit
+        j_total.append(j_credit)
+        
+        joke_container.append(j_total)
+
+        
+        
+       
+        
+
+        
+
         console.log(data[i])
     }
 }
@@ -106,6 +136,8 @@ function display_jokes(data){
 
 // Run the code when the page is ready
 window.onload = function() {
+
+    // TO DO only run on jokes page
     fetch_jokes()
   };
 
