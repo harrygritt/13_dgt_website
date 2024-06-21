@@ -99,8 +99,11 @@ function display_jokes(data){
 
     const joke_container = document.getElementById("joke_container")
 
+    // Rabdomise order of jokes displayed
+    data = data.sort((a , b) => 0.5 - Math.random())
+
     // Loop to display each joke 
-    for (let i = 1; i < data.length; i++) {
+    for (let i = 0; i < data.length; i++) {
 
         // Create the joke contianer
         let j_total = document.createElement("div");
