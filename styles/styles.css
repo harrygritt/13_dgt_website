@@ -57,26 +57,31 @@ body {
     background-color: #f7934c;
     box-shadow: 8px 4px 8px 4px rgba(0,0,0,0.1);
     opacity: 90%;
-    margin: auto;
     margin-bottom: var(--nav-margin-top);
     border-radius: var(--curve);
     position: sticky;
+    bottom: 150px;
+    left: 5%;
+    text-align: center;
+    height: 50%;
 }
 
 
 .mobile-nav a {
-    display: inline-block;
+    display: inline-grid;
     color: black;
-    text-align: center;
+    align-items: center;
+    justify-items: center;
+
     padding: 13px;
     text-decoration: none;
-    font-size: 17px;
     border-radius: var(--curve);
     height: var(--nav-height)
 }
 
 .mobile-nav img {
-    width: 40px;
+    width: 100px;
+    height: 100px;
 }
 
 
