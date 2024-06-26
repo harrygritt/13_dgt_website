@@ -1,4 +1,4 @@
-
+// Calculates mixer percentage
 function mixer_calc(){
     // Get mixer inputs
     var percent_input = document.getElementById("percent")
@@ -28,7 +28,7 @@ function mixer_calc(){
     
 }
 
-
+// Converts units 
 function convert_calc(operation){
     // Get Formulas
     const formula = document.getElementById("unit_formula")
@@ -99,6 +99,9 @@ function display_jokes(data){
 
     const joke_container = document.getElementById("joke_container")
 
+    // If there isnt a container dont bother
+    if(!joke_container) return;
+
     // Rabdomise order of jokes displayed
     data = data.sort((a , b) => 0.5 - Math.random())
 
@@ -124,13 +127,6 @@ function display_jokes(data){
         j_total.append(j_credit)
         
         joke_container.append(j_total)
-
-        
-        
-       
-        
-
-        
 
         console.log(data[i])
     }
