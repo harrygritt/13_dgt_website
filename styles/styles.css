@@ -1,5 +1,5 @@
 :root {
-    --nav-height: 80px;
+    --nav-height: 70px;
     --nav-margin-top: 20px;
     --curve: 10px;
 }
@@ -15,6 +15,7 @@ body {
     font-style: normal;
     margin: 0;
     overflow-x: hidden; 
+    background-color: #f9bf97;
 }
 
 .navbar {
@@ -49,6 +50,7 @@ body {
 
 .navbar img {
     width: 40px;
+    height: var(--nav-height) / 2;
 }
 
 
@@ -87,7 +89,7 @@ body {
 }
 
 
-.calc-grid {
+.content-grid {
     display: grid;
     grid-template-rows: repeat(4, 1fr);
     row-gap: 30px;
@@ -99,7 +101,7 @@ body {
 }
 
 
-.calc-grid > div {
+.content-grid > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
@@ -132,6 +134,7 @@ body {
     grid-template-rows: 2fr, 1fr;
     gap: 10%;
     pointer-events: none;
+    box-shadow: 0px 8px 6px rgba(0,0,0,0.1);
     
 }
 
@@ -148,6 +151,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    padding: 20px;
     
 }
 
@@ -157,7 +161,7 @@ body {
     border-radius: var(--curve);
 }
 
-.go_calculate {
+.index-button {
     color: black;
     padding: 15px 32px;
     text-align: center;
@@ -168,12 +172,12 @@ body {
     
 }
 
-.go_calculate > a {
+.index-button > a {
     color: black;
     text-decoration: none;
 }
 
-.go_calculate:hover {
+.index-button:hover {
     color: white;
     background-color: #e85d04;
 }
@@ -187,17 +191,10 @@ body {
     font-size: small;
 }
 
-/* Media queiry
-    - format calc page
-    - make jokes width 100%
-    - Mobile navbar with icons
-
-Flip so media query is changin to desktop layout and mobile layout is outside it
-*/
-
+/* Formats website to be mobile friendly */
 @media screen and (max-width: 480px) {
     
-    .calc-grid {
+    .content-grid {
         width: 90%;
         margin-bottom: 20px;
     }
@@ -224,7 +221,7 @@ Flip so media query is changin to desktop layout and mobile layout is outside it
         
     }
 
-    .go_calculate {
+    .index-button {
         font-size: 2rem;
         margin: 4px 2px;
         padding: 7px 16px;
