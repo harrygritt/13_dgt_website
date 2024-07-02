@@ -101,14 +101,26 @@ body {
 }
 
 
+.jokes {
+    grid-column: span 2;
+}
+
+
 .content-grid > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
     border-radius: var(--curve);
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
+.content-grid img {
+    width: 50%;
+    height: 50%;
+    margin-top: 13%;
+}
 
 .calc-page-grid {
     display: grid;
@@ -181,6 +193,7 @@ body {
 
 #joke_container em{
     font-weight: bold;
+    
 }
 
 .credit {
