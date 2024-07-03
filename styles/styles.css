@@ -134,7 +134,7 @@ body {
     margin: auto;
 }
 
-/* */
+/* Formatting and Displaying background of the heading*/
 .heading-background {
     background-image: url(../images/winery-barrels-large.jpg); /* Royalty Free image from https://www.pickpik.com/winery-chai-barrel-wine-cave-castle-124788 */
     background-repeat: no-repeat;
@@ -149,7 +149,7 @@ body {
     
 }
 
-
+/* Formatting and Displaying heading*/
 .heading {
     text-align: center;
     font-size: 5rem;
@@ -166,6 +166,7 @@ body {
     background-color: #f7934cc7;
     border-radius: var(--curve);
 }
+
 
 /* Styling buttons on index page */
 .index-button {
@@ -192,7 +193,7 @@ body {
 }
 
 
-/* Modifies text in certain areas of website */
+/* Modifies text for certain areas of website */
 .formula {
     font-size: small;
 }
