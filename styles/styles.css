@@ -94,13 +94,14 @@ body {
 /* Styling how content is display/formatted */ 
 .content-grid {
     display: grid;
-    grid-template-rows: repeat(4, 1fr);
+    /*grid-template-rows: repeat(4, 1fr);*/
     row-gap: 30px;
     background-color: #f7934c;
     padding: 10px;
     width: 50%;
     border-radius: 15px;
     box-shadow: 0px 4px 8px 4px rgba(0,0,0,0.1);
+    width: 70%;
 }
 
 /* Centres jokes page content */
@@ -117,6 +118,8 @@ body {
     border-radius: var(--curve);
     word-wrap: break-word;
     overflow: hidden;
+    display: block;
+    align-content: center;
 }
 
 .content-grid img {
@@ -128,6 +131,7 @@ body {
 .page-format-grid {
     display: grid;
     grid-template-columns: auto auto;
+    row-gap: 50px;
     height: 100%;
     width: 100%;
     justify-items: center;
@@ -206,6 +210,10 @@ body {
 
 
 .credit {
+    font-size: small;
+}
+
+.calc_description {
     font-size: small;
 }
 

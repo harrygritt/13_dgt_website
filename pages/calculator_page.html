@@ -41,27 +41,41 @@
 
     <!-- Heading of page -->
     <div class="heading">
-        <p>Calculate mixer percentage or convert units</p>
+        <p>Helpful Calculators</p>
     </div>
 
     <!-- Formats and displays content of index page -->
     <div class="page-format-grid">
         
+        <!-- Mixer percentage calculator -->
         <div class="content-grid">
             
+            <!-- Description of calculator -->
+            <div>
+                <p class="calc_description">
+                    To use the mixer percentage calculator below, input your values into the 
+                    availible white rectangles and the actual alcohol pecentage of your mixer will 
+                    be displayed along with the formula used for this calculation. The precentage 
+                    field is the alcohol percenatge of the straight used in ther mixer. The shot 
+                    volume field is the volume of the straight that is in the mixer. The cup 
+                    volume field is the total volume of the straight and non-alcoholic liquid 
+                    combined.
+                </p>
+            </div>
+
             <!--Inputs for mixer calculations-->
             <div>
-                <label for="percent">Percentage (%):</label>
+                <label for="percent">Percentage (%):</label><br>
                 <input type="number" id="percent" value="0" onchange="mixer_calc('percent')"/><br>
             </div>
             
             <div>
-                <label for="shot_size">Shot Volume (mL):</label>
+                <label for="shot_size">Shot Volume (mL):</label><br>
                 <input type="number" id="shot_size" value="0" onchange="mixer_calc('shot_size')"/><br>
             </div>
 
             <div>
-                <label for="cup_size">Cup Volume (mL):</label>
+                <label for="cup_size">Cup Volume (mL):</label><br>
                 <input type="number" id="cup_size" value="0" onchange="mixer_calc('cup_size')"/>
             </div>
 
@@ -76,21 +90,34 @@
 
         </div>
 
+        <!-- Unit conversion calculator-->
         <div class="content-grid">
 
-            <!--Inputs for converting unit calculations-->
+            <!-- Description of calculator -->
             <div>
-                <label for="brix_value">Brix Value:</label>
+                <p class="calc_description">
+                    To use the unit conversion calculator below, simply locate the 
+                    unit of measurement you know (either in brix, potential, or specific gravity), 
+                    click on the white rectangle next to it and type in the value of this unit 
+                    before pressing enter. This value will appear converted next to its respective 
+                    unit and the formula used for each conversion will be displayed at the bottom 
+                    of the calulator.
+                </p>
+            </div>
+
+            <!-- Inputs for converting unit calculations -->
+            <div>
+                <label for="brix_value">Brix Value:</label><br>
                 <input type="number" id="brix_value" value="0" onchange="convert_calc('brix')"/><br>
             </div>
             
             <div>
-                <label for="potential_value">Potential Value (%):</label>
+                <label for="potential_value">Potential Value (%):</label><br>
                 <input type="number" id="potential_value" value="0" onchange="convert_calc('potential')"/><br>
             </div>
 
             <div>
-                <label for="sg_value">SG Value:</label>
+                <label for="sg_value">Specific Gravity Value:</label><br>
                 <input type="number" id="sg_value" value="1" onchange="convert_calc('sg')"/>
             </div>
             
@@ -101,7 +128,69 @@
             </div>
 
         </div>
+
+        <!-- Dilution calculator -->
+        <div class="content-grid">
+            <div>
+                <p class="calc_description"> 
+                    *description*
+                </p>
+            </div>
+
+            <div>
+                <label for="startpercentage">Start Percentage (%):</label><br>
+                <input type="number" id="startpercentage" value="0" onchange="Dilution()"/>
+            </div>
+
+            <div>
+                <label for="startvolume">Start Volume (ml):</label><br>
+                <input type="number" id="startvolume" value="0" onchange="Dilution()"/>
+            </div>
+
+            <div>
+                <label for="targetpercentage">Target Percentage (%):</label><br>
+                <input type="number" id="targetpercentage" value="0" onchange="Dilution()"/>
+            </div>
+            <div>
+                <p id="wateranswer">Water = 0L</p>
+                <p id="volumeanswer">Total Volume = 0L</p>
+            </div>
+
+        </div>
+
+        <!-- Second Dilution calculator -->
+        <div class="content-grid">
+            <div>
+                <p class="calc_description"> 
+                    *description*
+                </p>
+            </div>
+
+            <div>
+                <label for="startpercentage2">Start Percentage (%):</label><br>
+                <input type="number" id="startpercentage2" value="0" onchange="Dilutiontwo()"/>
+            </div>
+            
+            <div>
+                <label for="targetpercentage2">Target Percentage (%):</label><br>
+                <input type="number" id="targetpercentage2" value="0" onchange="Dilutiontwo()"/>
+            </div>
+
+            <div>
+                <label for="targetvolume2">Target Volume (ml):</label><br>
+                <input type="number" id="targetvolume2" value="0" onchange="Dilutiontwo()"/>
+            </div>
+
+            
+            <div>
+                <p id="wateranswer2">Water = 0L</p>
+                <p id="spiritanswer2">Spirit to add = 0L</p>
+            </div>
+
+        </div>
     </div>
+    
+    
 
     <!-- Navigation Bar for mobile -->
     <div class="mobile-nav">

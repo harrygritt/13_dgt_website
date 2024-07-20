@@ -22,6 +22,7 @@ function mixer_calc(){
 
     // Calculate actual percentage of mixer
     actual_percent = Math.round(percent * shot) / cup
+    
 
     // Update value
     actual_percent_value.innerHTML = "Actual Percentage = " + actual_percent + "%"
@@ -75,6 +76,44 @@ function convert_calc(operation){
     sg_input.value = Math.round(sg * 1000) / 1000 // 3 dp
     brix_input.value = Math.round(brix)
 
+}
+
+
+function Dilution(){
+
+    var startpercentage1 = document.getElementById("startpercentage");
+    const startpercentage = Number(startpercentage1.value);
+
+    var startvolume1 = document.getElementById("startvolume");
+    const startvolume = Number(startvolume1.value);
+
+    var targetpercentage1 = document.getElementById("targetpercentage");
+    const targetpercentage = Number(targetpercentage1.value);
+
+    var wateranswer = (((startpercentage - targetpercentage) * startvolume) / targetpercentage);
+    var volumeanswer = (startvolume + wateranswer);
+
+    document.getElementById("wateranswer").innerHTML = 'Water = '+wateranswer+'L';
+    document.getElementById("volumeanswer").innerHTML = 'Total Volume = '+volumeanswer+'L';
+}
+
+
+function Dilutiontwo(){
+
+    var startpercentage1 = document.getElementById("startpercentage2");
+    const startpercentage2 = Number(startpercentage1.value);
+
+    var targetpercentage1 = document.getElementById("targetpercentage2");
+    const targetpercentage2 = Number(targetpercentage1.value);
+
+    var targetvolume1 = document.getElementById("targetvolume2");
+    const targetvolume2 = Number(targetvolume1.value);
+
+    var wateranswer2 = ((targetvolume2/startpercentage2)*(startpercentage2-targetpercentage2));
+    var spiritanswer2 = (targetvolume2 - wateranswer2);
+
+    document.getElementById("wateranswer2").innerHTML = 'Water = '+wateranswer2+'L';
+    document.getElementById("spiritanswer2").innerHTML = 'Spirit to add = '+spiritanswer2+'L';
 }
 
 
